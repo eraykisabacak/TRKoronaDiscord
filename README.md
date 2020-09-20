@@ -19,4 +19,4 @@ Ve bir de Cron job kullanılmıştır. Cron API saniyelik olarak istek atmaktad�
 
 Eğer sizde bu botu kullanmak isterseniz yapacağınız tek şey en altta bulunan token yerine sunucu tokeninizi girmeniz yeterlidir. Botun devamlı açık kalması içinde Heroku kullandım.
 
-#[Blog](https://eraykisabacak.com/node-js-ile-discord-covid-19-botu-gelistirme/)
+## [Blog](https://eraykisabacak.com/node-js-ile-discord-covid-19-botu-gelistirme/)
