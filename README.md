@@ -18,3 +18,5 @@ Discord botu için discord tarafından oluşturulmuş bir paket discord.js paket
 Ve bir de Cron job kullanılmıştır. Cron API saniyelik olarak istek atmaktadır ve eski veri ile cron tarafından atılmış istekler karşılaştırılarak eğer birbirlerinden farklı veriler ise bot son dakika olarak mesaj atmakta ve yeni veriler detaylı bir şekilde gösterilmedir. ( TEST EDİLMEMİŞTİR )
 
 Eğer sizde bu botu kullanmak isterseniz yapacağınız tek şey en altta bulunan token yerine sunucu tokeninizi girmeniz yeterlidir. Botun devamlı açık kalması içinde Heroku kullandım.
+
+#[Blog](https://eraykisabacak.com/node-js-ile-discord-covid-19-botu-gelistirme/)
