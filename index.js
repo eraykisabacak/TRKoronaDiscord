@@ -28,7 +28,7 @@ client.on('ready', () => {
   );
 });
 
-function cronStart() {
+function cronStart(msg) {
   var job = new CronJob(
     '* * * * * *',
     function () {
@@ -47,17 +47,17 @@ function cronStart() {
                   '!!! Son Dakika Yeni Korona Virus Tablosu !!!'
                 );
                 let data = JSON.parse(body);
-                msg.channel(`Tarih : ${data[0]['tarih']}
-            Günlük Test : ${data[0]['gunluk_test']}
-            Günluk Vaka : ${data[0]['gunluk_vaka']}
-            Günlük Vefat : ${data[0]['gunluk_vefat']}
-            Günlük İyileşen : ${data[0]['gunluk_iyilesen']}
-            Toplam Test : ${data[0]['toplam_test']}
-            Toplam Vaka : ${data[0]['toplam_vaka']}
-            Toplam Vefat : ${data[0]['toplam_vefat']}
-            Toplam İyileşen : ${data[0]['toplam_iyilesen']}
-            Hastalarda Zatürre Oranı : ${data[0]['hastalarda_zaturre_oran']}
-            Ağır Hasta Sayısı : ${data[0]['agir_hasta_sayisi']}`);
+                msg.channel.send(`Tarih : ${data[0]['tarih']}
+                  Günlük Test : ${data[0]['gunluk_test']}
+                  Günluk Vaka : ${data[0]['gunluk_vaka']}
+                  Günlük Vefat : ${data[0]['gunluk_vefat']}
+                  Günlük İyileşen : ${data[0]['gunluk_iyilesen']}
+                  Toplam Test : ${data[0]['toplam_test']}
+                  Toplam Vaka : ${data[0]['toplam_vaka']}
+                  Toplam Vefat : ${data[0]['toplam_vefat']}
+                  Toplam İyileşen : ${data[0]['toplam_iyilesen']}
+                  Hastalarda Zatürre Oranı : ${data[0]['hastalarda_zaturre_oran']}
+                  Ağır Hasta Sayısı : ${data[0]['agir_hasta_sayisi']}`);
                 oldData = cronData;
               }
               break;
@@ -80,14 +80,14 @@ client.on('message', (msg) => {
   if (msg.content === 'ping') {
     msg.reply('Pong! ');
     if (!isCron) {
-      cronStart();
+      cronStart(msg);
       msg.reply('Cron Starting');
     }
   }
   if (msg.content === 'Hi') {
     msg.reply('Hello!');
     if (!isCron) {
-      cronStart();
+      cronStart(msg);
       msg.reply('Cron Starting');
     }
   }
@@ -111,7 +111,7 @@ client.on('message', (msg) => {
       }
     );
     if (!isCron) {
-      cronStart();
+      cronStart(msg);
       msg.reply('Cron Starting');
     }
   }
@@ -141,7 +141,7 @@ client.on('message', (msg) => {
       }
     );
     if (!isCron) {
-      cronStart();
+      cronStart(msg);
       msg.reply('Cron Starting');
     }
   }
